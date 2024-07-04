@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Um Meg | Gunnar Lukas Jóhansson</title>
+    </head>
+    
+    <!--title-->
+    <div>
+        <div>
+            <h1>Um Meg</h1>
+        </div>
+
+        <!--Stutt um meg-->
+        <div>
+            <span>Eg eiti Gunnar Lukas Jóhansson,</span>
+            <span>og eg eri </span>
+            <span id="Gunnar_Lukas_ár"></span>
+            <span>Eg havi eina mammu, ein pápa og tveir beiggjar.</span>
+        </div>
+    </div>
+    <br>
+    <!--meira um meg-->
+    <div>
+        <div>
+            <h2>info</h2>
+        </div>
+
+        <ul>
+            <li>arbeið: NEI</li>
+            <li>Í parlagi: NEI</li>
+            <li>Í skúla: NEI</li>
+        </ul>
+    </div>
+
+    <!--python skript til at vísa hvussu nógv ár Gunnar Lukas er-->
+    <script>
+        const startDate = new Date('2010-02-11')
+        const currentDate = new Date();
+        let counterValue = currentDate.getFullYear() - startDate.getFullYear();
+        const hasPassedDate = currentDate.getMonth() > startDate.getMonth() ||
+                            (currentDate.getMonth() === startDate.getMonth() && currentDate.getDate());
+        if (!hasPassedDate) {
+            counterValue--;
+        }
+
+        document.getElementById('Gunnar_Lukas_ár').textContent = `${counterValue} ára gamal.`;
+    </script>
+</html>
